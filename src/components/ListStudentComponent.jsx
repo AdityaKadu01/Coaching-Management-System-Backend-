@@ -13,6 +13,7 @@ class ListStudentComponent extends Component {
         this.addStudent= this.addStudent.bind(this);  {/*bind funtion will bind the addStudent funtion*/}
         this.editStudent= this.editStudent.bind(this);
         this.deleteStudent= this.deleteStudent.bind(this);
+        this.viewStudent=this.viewStudent.bind(this);
     }
 
     componentDidMount() {
@@ -35,14 +36,31 @@ class ListStudentComponent extends Component {
         })
     }
 
+    viewStudent(id){
+        this.props.history.push(`/view-student/${id}`);
+    }
+
     render() {
         return (
             <div>
                 <h2 className="text-center">Students' List</h2>
                 <div className="row">
-                    <div className="col-2" id="add">
-                    <button className="btn btn-primary" onClick={this.addStudent}>Add Student</button> {/* button will call addStudent() using constructor*/}
+                    <div className="col-12" id="add">
+                    <div className="row">
+                        <div className="col-2">
+                    <button id="addbutton" className="btn btn-primary" onClick={this.addStudent}>Add Student</button> {/* button will call addStudent() using constructor*/}
                     </div>
+                    <div id="filltertitle" className="col-1"><b>Filter By:</b></div>
+                    <div className="col-2 ">
+                        <div id="fillterbutton" class="form-group bg-light">
+                            <select class="form-control" name="gender" id="" required>
+                                <option disabled selected value>select option</option>
+                                <option>Course</option>
+                            </select>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
                 </div>
                 <div className="row">
                     <table className="table table-striped table-bordered">
@@ -73,7 +91,7 @@ class ListStudentComponent extends Component {
                                             <td>
                                                 <button className="btn btn-info" onClick = {()=>this.editStudent(student.stud_id)}>Update</button> 
                                                 <button style={{marginLeft: "9px"}} className="btn btn-danger" onClick={()=>this.deleteStudent(student.stud_id)}>Delete</button>
-                                                <button style={{marginTop: "9px"}} className="btn btn-secondary" >View Profile</button>
+                                                <button style={{marginTop: "9px", marginLeft: "25px"}} className="btn btn-secondary" onClick={()=>this.viewStudent(student.stud_id)}>View Profile</button>
                                             </td>
                                         </tr>
                                 )

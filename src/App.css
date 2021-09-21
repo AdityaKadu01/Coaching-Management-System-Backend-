@@ -61,3 +61,15 @@
   color:black;
   font-weight:bold ;
 }
+
+#addbutton,#filltertitle,#fillterbutton{
+  display: inline-block;
+}
+
+.card{
+  margin-top: 20px;
+}
+
+#card{
+  margin-top: 20px;
+}

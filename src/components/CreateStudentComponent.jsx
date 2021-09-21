@@ -131,7 +131,7 @@ class CreateStudentComponent extends Component {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className="card col-md-6 offset-md-3 offset-md-3">
+                        <div id="card" className="card col-md-6 offset-md-3 offset-md-3">
                           {
                               this.getTitle()
                           }
