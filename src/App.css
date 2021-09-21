@@ -42,9 +42,10 @@
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color: black;
+  background-color: #f0ad4e;
   text-align: center;
-  color: white;
+  color: black;
+  
 }
 
 .homelink {
@@ -54,4 +55,9 @@
 #add{
   padding-left: 0cm;
   padding-bottom: 5px;
+}
+
+#header{
+  color:black;
+  font-weight:bold ;
 }

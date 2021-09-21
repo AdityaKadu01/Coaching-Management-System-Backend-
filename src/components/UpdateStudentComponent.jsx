@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import StudentService from '../services/StudentService';
 
-class CreateStudentComponent extends Component {
+class UpdateStudentComponent extends Component {
     constructor(props) {
         super(props)
 
@@ -32,33 +32,9 @@ class CreateStudentComponent extends Component {
         this.changeStateHandler = this.changeStateHandler.bind(this);
         this.changePinCodeHandler = this.changePinCodeHandler.bind(this);
 
-        this.saveOrUpdateStudent = this.saveOrUpdateStudent.bind(this);
+        this.updateStudent = this.updateStudent.bind(this);
         this.cancel = this.cancel.bind(this);
 
-    }
-
-    componentDidMount(){
-
-        if(this.state.stud_id === '_add'){
-            return
-        }else {
-            StudentService.getStudentById(this.state.stud_id).then((res) => {
-                let student = res.data;
-                this.setState({
-                    stud_Fname: student.stud_Fname, 
-                    stud_Lname: student.stud_Lname,
-                    stud_Email: student.stud_Email,
-                 stud_Mobileno: student.stud_Mobileno, 
-                 stud_Password: student.stud_Password, 
-                 address: { houseNo: student.address.houseNo,
-                                street:student.address.street, 
-                                city: student.address.city, 
-                                state: student.address.state, 
-                                pincode: student.address.pincode }
-                });
-            });
-        }
-       
     }
 
     changeFirstNameHandler = (event) => {
@@ -95,35 +71,38 @@ class CreateStudentComponent extends Component {
         this.setState({ address:{...this.state.address,pincode: event.target.value} })
     }
 
-    saveOrUpdateStudent=(s)=>{
+    componentDidMount(){
+        StudentService.getStudentById(this.state.stud_id).then((res) => {
+            let student = res.data;
+            this.setState({
+                stud_Fname: student.stud_Fname, 
+                stud_Lname: student.stud_Lname,
+                stud_Email: student.stud_Email,
+             stud_Mobileno: student.stud_Mobileno, 
+             stud_Password: student.stud_Password, 
+             address: { houseNo: student.address.houseNo,
+                            street:student.address.street, 
+                            city: student.address.city, 
+                            state: student.address.state, 
+                            pincode: student.address.pincode }
+            });
+        });
+    }
+
+    updateStudent=(s)=>{
         s.preventDefault();
         let student = {stud_Fname: this.state.stud_Fname, stud_Lname: this.state.stud_Lname,stud_Email: this.state.stud_Email,
              stud_Mobileno: this.state.stud_Mobileno, stud_Password: this.state.stud_Password, address: { houseNo: this.state.address.houseNo,
              street: this.state.address.street, city: this.state.address.city, state: this.state.address.state, pincode: this.state.address.pincode }};
         console.log('student =>' + JSON.stringify(student));
 
-        if(this.state.stud_id === '_add'){
-             StudentService.addStudent(student).then(res => {
-                this.props.history.push('/allstudents');
-            });
-        }else {
-            StudentService.updateStudent(student, this.state.stud_id).then(res =>{
-                this.props.history.push('/allstudents');
-            });
-        }
-       
+        StudentService.updateStudent(student, this.state.stud_id).then(res =>{
+            this.props.history.push('/allstudents');
+        })
     }
 
     cancel(){
         this.props.history.push('/allstudents');  {/*this function will route to allstudents*/}
-    }
-
-    getTitle(){
-        if(this.state.stud_id === '_add'){
-            return  <h3 className="text-center">Add Student</h3>
-        }else{
-           return <h3 className="text-center">Update Student</h3>
-        }
     }
 
     render() {
@@ -132,9 +111,7 @@ class CreateStudentComponent extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="card col-md-6 offset-md-3 offset-md-3">
-                          {
-                              this.getTitle()
-                          }
+                            <h3 className="text-center">Update Student</h3>
                             <div className="card-body">
                                 <form>
                                     <legend className="mb-0 mt-3">Basic Details</legend>
@@ -206,7 +183,7 @@ class CreateStudentComponent extends Component {
                                             name="pincode" value={this.state.address.pincode} onChange={this.changePinCodeHandler} required />
                                         </div>
                                     </div>
-                                    <legend class="mb-0 mt-3">Academic Details</legend>
+                                    {/* <legend class="mb-0 mt-3">Academic Details</legend>
                                     <div class="row row-cols-1">
                                         <div class="col my-2">
                                             <label htmlFor="10thpercentage">10th percentage:</label>
@@ -226,8 +203,8 @@ class CreateStudentComponent extends Component {
                                             </select>
                                         </div>
 
-                                    </div>
-                                    <button className="btn btn-success" onClick={this.saveOrUpdateStudent}>Save</button>
+                                    </div> */}
+                                    <button className="btn btn-success" onClick={this.updateStudent}>Save</button>
                                     <button className="btn btn-danger" onClick={this.cancel} style={{marginLeft:"10px"}}>Cancel</button>
                                 </form>
                             </div>
@@ -241,4 +218,4 @@ class CreateStudentComponent extends Component {
     }
 }
 
-export default CreateStudentComponent;
+export default UpdateStudentComponent;
