@@ -114,6 +114,7 @@ class UpdateStudentComponent extends Component {
                             <h3 className="text-center">Update Student</h3>
                             <div className="card-body">
                                 <form>
+                                    
                                     <legend className="mb-0 mt-3">Basic Details</legend>
                                     <div className="row row-cols-1">
                                         <div className="col my-2">  {/**input field for Student First name*/}

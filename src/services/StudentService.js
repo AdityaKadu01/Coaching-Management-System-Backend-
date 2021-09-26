@@ -23,6 +23,10 @@ class StudentService{
     deleteStudentById(studentId){
         return axios.delete(Student_API_BASE_URL + '/' + studentId);
     }
+
+    getSubjectById(studentId){
+        return axios.get(Student_API_BASE_URL + '/subject/' + studentId)
+    }
 }
 
 export default new StudentService()

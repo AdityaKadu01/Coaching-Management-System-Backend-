@@ -14,6 +14,7 @@ class ListStudentComponent extends Component {
         this.editStudent= this.editStudent.bind(this);
         this.deleteStudent= this.deleteStudent.bind(this);
         this.viewStudent=this.viewStudent.bind(this);
+      
     }
 
     componentDidMount() {
@@ -54,8 +55,9 @@ class ListStudentComponent extends Component {
                     <div className="col-2 ">
                         <div id="fillterbutton" class="form-group bg-light">
                             <select class="form-control" name="gender" id="" required>
-                                <option disabled selected value>select option</option>
-                                <option>Course</option>
+                                <option disabled selected value>Select Option</option>
+                                <option>11th Science</option>
+                                <option>12th Science</option>
                             </select>
                         </div>
                         </div>
