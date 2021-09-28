@@ -254,10 +254,10 @@ class CreateStudentComponent extends Component {
                                             <label for="choose course">Enroll to:</label><br />
                                             <select id="class" name="class" placeholder="Enroll to" ref="" id="enrollto" class="form-control" >
                                                 <option disabled selected value> ---Select Course--- </option>
-                                                <option value="11pcm">11th PCM</option>
-                                                <option value="11pcb">11th PCB</option>
-                                                <option value="12pcm">12th PCM</option>
-                                                <option value="12pcb">12th PCB</option>
+                                                <option value="11th_sc">11th Science</option>
+                                                <option value="12th_sc">12th Science</option>
+                                                {/* <option value="12pcm">12th PCM</option>
+                                                <option value="12pcb">12th PCB</option> */}
                                             </select>
                                         </div>
 

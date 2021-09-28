@@ -48,7 +48,7 @@ class HearderComponent extends Component {
             
             <li class="nav-item" >
             <h2 >
-              <a class="nav-link " href="#">
+              <a class="nav-link " href="/www.cms.com/course">
                 Course
               </a></h2>
             </li>
@@ -65,7 +65,7 @@ class HearderComponent extends Component {
             <h2>
             <li class="nav-item">
               {/* <a style={{display:'none'}} class="nav-link " href="#"> */}
-              <a class="nav-link " href="#">
+              <a class="nav-link " href="/www.cms.com/login">
                 Login
               </a>
             </li>

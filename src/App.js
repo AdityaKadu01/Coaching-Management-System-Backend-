@@ -9,6 +9,9 @@ import UpdateStudentComponent from './components/UpdateStudentComponent';
 import ViewStudentComponent from './components/ViewStudentComponent';
 import Home from "./components/Home";
 import Aboutus from './components/AboutUs';
+import Course from './components/Course';
+import LogIn from './components/LogIn';
+import StudentPage from './components/StudentPage';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Switch>
              <Route path = "/www.cms.com/" exact component={Home}></Route>
              <Route path = "/www.cms.com/aboutus" component={Aboutus}></Route>
+             <Route path = "/www.cms.com/course" component={Course}></Route>
+             <Route path = "/www.cms.com/login" component={LogIn}></Route>
+             <Route path = "/www.cms.com/student" component={StudentPage}></Route>
             <Route path = "/allstudents" component={ListStudentComponent}></Route> {/*router response for all student data*/}
             <Route path = "/add-student/:id" component={CreateStudentComponent}></Route> {/*router will send request with post method include student data */}
             <Route path = "/view-student/:id" component={ViewStudentComponent}></Route>
