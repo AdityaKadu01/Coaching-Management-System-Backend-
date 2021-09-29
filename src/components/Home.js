@@ -1,14 +1,15 @@
 
 import React from 'react'
+import cap from './images/cap.jpg';
+import img from './images/images.jpg';
+import img2 from './images/img4.jpg'
 
 const Aboutus = () => {
   return (
 
     
         <>
-    
-      
-         
+       
          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -17,15 +18,15 @@ const Aboutus = () => {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100"                 src="./images/images.jpg"
+    <img class="d-block w-100"                 src={img2}
  alt="First slide"/>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100"                 src="./images/images.jpg"
+      <img class="d-block w-100"                 src={img}
  alt="Second slide"/>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100"                 src="./images/images.jpg"
+      <img class="d-block w-100"                 src={img}
  alt="Third slide"/>
     </div>
   </div>
@@ -38,11 +39,14 @@ const Aboutus = () => {
     <span class="sr-only">Next</span>
   </a>
 </div>
-         <br/><div class="row">
-         <img class="col-md-4" class="img-circle"              src="./images/cap.jpg"
+         <br/><div className="row">
+        <div className="col-md-4" >
+         <img className="img-circle"              src={cap}
  alt="cap"/>
-         <p class="text-left">
-        <h3 class="text-center">Programme</h3> <br/> TARGET RANKER SUPER batch for JEE- MAIN and Advancedfor 2021 is going to start<br/> 
+ </div>
+ <div className="col-md-1"></div> 
+         <p className="col-md-7">
+        <h3 className="text-center">Programme</h3> <br/> TARGET RANKER SUPER batch for JEE- MAIN and Advancedfor 2021 is going to start<br/> 
          from 9th October .To get admission in this batch , your rank in JEE-MAIN Should be<br/>
          below 60,000, Concessions criteria isavailable on our website. Our foundation course<br/> 
          old students will be given additional concessions.We will also start our offline classes<br/>
@@ -58,7 +62,7 @@ const Aboutus = () => {
          <br/><br/>
           <div className="footerdesign">
          
-          <div class="row g-2">
+          <div className="row g-2">
           <br/>
   <div class="col-md">
     <div class="text-center">

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react" ;
 import {Jumbotron,Container,Button,Card,CardBody,CardImg,CardText,Cardstyle,CardTitle,CardHeader,ListGroup,ListGroupItem}  from "reactstrap";
-import img2 from './Image/img2.jpg'   ;
-import img1 from './Image/img1.jpg'   ;
+import img2 from './Image/img2.jpg';
+import img1 from './Image/img1.jpg';
+import img3 from './Image/img3.jpg';
 
 
 
@@ -29,7 +30,7 @@ useEffect (() =>{
             <div className="row">
 <div className="col-sm-4">
             <Card style={{ width: '14rem' }}>
-  <CardImg variant="top" src="Image/img2.jpg" alt="..." />
+  <CardImg variant="top" src={img2} alt="..." />
   <CardBody>
     <CardTitle>Total Courses</CardTitle>
     <CardText>
@@ -44,7 +45,7 @@ useEffect (() =>{
 
 
             <Card style={{ width: '14rem' }}>
-            <CardImg variant="card-img-top" src="Image/img1.jpg" alt="..." />
+            <CardImg variant="card-img-top" src={img1} alt="..." />
             
   <CardBody>
     <CardTitle>Total Teachers</CardTitle>
@@ -58,7 +59,7 @@ useEffect (() =>{
 </div>
 <div className="col-sm-4">
             <Card style={{ width: '14rem' }}>
-  <CardImg variant="top" src="Image/img3.jpg" />
+  <CardImg variant="top" src={img3} />
   <CardBody>
     <CardTitle>Total Classes</CardTitle>
     <CardText>

@@ -12,6 +12,7 @@ import Aboutus from './components/AboutUs';
 import Course from './components/Course';
 import LogIn from './components/LogIn';
 import StudentPage from './components/StudentPage';
+import Login from "./components/login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
              <Route path = "/www.cms.com/aboutus" component={Aboutus}></Route>
              <Route path = "/www.cms.com/course" component={Course}></Route>
              <Route path = "/www.cms.com/login" component={LogIn}></Route>
+             {/* <Route path = "/www.cms.com/login" component={Login}></Route> */}
              <Route path = "/www.cms.com/student" component={StudentPage}></Route>
             <Route path = "/allstudents" component={ListStudentComponent}></Route> {/*router response for all student data*/}
             <Route path = "/add-student/:id" component={CreateStudentComponent}></Route> {/*router will send request with post method include student data */}

@@ -177,7 +177,7 @@ class CreateStudentComponent extends Component {
                                                 name="stud_Fname" value={this.state.stud_Fname} onChange={this.changeFirstNameHandler} required />
                                         </div>
                                         <div className="col my-2">  {/**input field for Student Last Name */}
-                                            <label htmlFor="lname">Last name:</label>
+                                            <label htmlFor="lname">Last name:<sup><b>*</b></sup></label>
                                             <input type="text" placeholder="Last Name" id="lname" className="form-control"
                                                 name="stud_Lname" value={this.state.stud_Lname} onChange={this.changeLastNameHandler} required />
                                         </div>
@@ -191,49 +191,49 @@ class CreateStudentComponent extends Component {
                                 <label for="other">Other</label><br/>
                             </div> */}
                                         <div className="col my-2">
-                                            <label htmlFor="email">Email-id:</label>
+                                            <label htmlFor="email">Email-id:<sup><b>*</b></sup></label>
                                             <input type="email" placeholder="E-mail" id="email" className="form-control"
                                                 name="stud_Email" value={this.state.stud_Email} onChange={this.changeEmailHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="number">Contact number:</label>
+                                            <label htmlFor="number">Contact number:<sup><b>*</b></sup></label>
                                             <input type="number" placeholder="Mobile Number" id="number" className="form-control"
                                                 name="stud_Mobileno" value={this.state.stud_Mobileno} onChange={this.changeMobileNoHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="password">Password:</label>
+                                            <label htmlFor="password">Password:<sup><b>*</b></sup></label>
                                             <input type="password" placeholder="Password" id="password" className="form-control"
                                                 name="stud_Password" value={this.state.stud_Password} onChange={this.changePasswordHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="confirm password">Confirm password:</label>
+                                            <label htmlFor="confirm password">Confirm password:<sup><b>*</b></sup></label>
                                             <input type="password" placeholder="Confirm password" id="confirm password" className="form-control" required />
                                         </div>
                                     </div>
                                     <legend className="mb-0 mt-3">Address Details</legend>
                                     <div className="row row-cols-1">
                                         <div className="col my-2">
-                                            <label htmlFor="housenumber">House Number:</label>
+                                            <label htmlFor="housenumber">House Number:<sup><b>*</b></sup></label>
                                             <input type="number" placeholder="House Number" id="housenumber" className="form-control"
                                                 name="houseNo" value={this.state.address.houseNo} onChange={this.changeHouseNoHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="streetname">Street Name:</label>
+                                            <label htmlFor="streetname">Street Name:<sup><b>*</b></sup></label>
                                             <input type="text" placeholder="Street Name" id="streetname" className="form-control"
                                                 name="street" value={this.state.address.street} onChange={this.changeStreetNameHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="city">City:</label>
+                                            <label htmlFor="city">City:<sup><b>*</b></sup></label>
                                             <input type="text" placeholder="City" id="city" className="form-control"
                                                 name="city" value={this.state.address.city} onChange={this.changeCityHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="state">State:</label>
+                                            <label htmlFor="state">State:<sup><b>*</b></sup></label>
                                             <input type="text" placeholder="State" ref="" id="state" className="form-control"
                                                 name="state" value={this.state.address.state} onChange={this.changeStateHandler} required />
                                         </div>
                                         <div className="col my-2">
-                                            <label htmlFor="pin">PIN Code:</label>
+                                            <label htmlFor="pin">PIN Code:<sup><b>*</b></sup></label>
                                             <input type="number" placeholder="PIN Code" id="pin" className="form-control"
                                                 name="pincode" value={this.state.address.pincode} onChange={this.changePinCodeHandler} required />
                                         </div>
@@ -241,17 +241,17 @@ class CreateStudentComponent extends Component {
                                     <legend class="mb-0 mt-3">Academic Details</legend>
                                     <div class="row row-cols-1">
                                         <div class="col my-2">
-                                            <label htmlFor="10thpercentage">10th percentage:</label>
+                                            <label htmlFor="10thpercentage">10th percentage:<sup><b>*</b></sup></label>
                                             <input type="number" placeholder="10th percentage" id="10thpercentage" class="form-control"
                                                 name="stud_10thper" value={this.state.stud_10thper} onChange={this.change10thperHandler} min="0" maxLength="100" required />
                                         </div>
                                         <div class="col my-2">
-                                            <label htmlFor="passingyear">Date of Passing:</label>
+                                            <label htmlFor="passingyear">Date of Passing:<sup><b>*</b></sup></label>
                                             <input type="number" placeholder="Passing year" ref="" id="passingyear" class="form-control"
                                                 name="stud_passyear" value={this.state.stud_passyear} onChange={this.changePassyearHandler} required />
                                         </div>
                                         <div class="col my-2">
-                                            <label for="choose course">Enroll to:</label><br />
+                                            <label for="choose course">Enroll to:<sup><b>*</b></sup></label><br />
                                             <select id="class" name="class" placeholder="Enroll to" ref="" id="enrollto" class="form-control" >
                                                 <option disabled selected value> ---Select Course--- </option>
                                                 <option value="11th_sc">11th Science</option>

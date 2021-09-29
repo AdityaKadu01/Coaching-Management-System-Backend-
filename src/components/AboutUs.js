@@ -1,4 +1,5 @@
 import React from 'react'
+import girl from './images/girl.jpg'
 
 const Aboutus = () => {
   return (
@@ -23,7 +24,7 @@ const Aboutus = () => {
             </ul>
             </div>
             <div>
-            <img class="d-block w-100"                 src="./images/girl.jpg"
+            <img class="d-block w-100"                 src={girl}
  alt="First slide"/>
             </div>
             <div>
